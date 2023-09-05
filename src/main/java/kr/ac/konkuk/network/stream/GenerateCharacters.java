@@ -1,4 +1,4 @@
-package stream;
+package kr.ac.konkuk.network.stream;
 
 import java.io.IOException;
 
