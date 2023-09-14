@@ -1,4 +1,4 @@
-package kr.ac.konkuk.network.stream.inheritance;
+package kr.ac.konkuk.network.stream.out.inheritance;
 
 class ChildTest {
     public static void print(Parent parent) {

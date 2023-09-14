@@ -1,8 +1,8 @@
-package kr.ac.konkuk.network.stream;
+package kr.ac.konkuk.network.stream.out;
 
 import java.io.IOException;
 
-public class GenerateCharacterByArray {
+public class GenerateCharacters {
     public static void main(String[] args) {
         try {
             generateCharacters();
@@ -18,15 +18,14 @@ public class GenerateCharacterByArray {
         int start = firstPrintableCharacter;
         int count = 0;
         var out = System.out;
-        byte[] line = new byte[numberOfCharactersPerLine + 2];
 
         while (count < 1000) {
             for (int i = start; i < start + numberOfCharactersPerLine; i++) {
-                line[i - start] = (byte) ((i - firstPrintableCharacter) % numberOfPrintableCharacters + firstPrintableCharacter);
+                out.write(((i - firstPrintableCharacter) % numberOfPrintableCharacters) + firstPrintableCharacter);
             }
-            line[72] = (byte) '\r';
-            line[73] = (byte) '\n';
-            out.write(line);
+            out.write((byte) '\r');
+            out.write((byte) '\n');
+
             start = ((start + 1) - firstPrintableCharacter) % numberOfPrintableCharacters + firstPrintableCharacter;
             count++;
         }

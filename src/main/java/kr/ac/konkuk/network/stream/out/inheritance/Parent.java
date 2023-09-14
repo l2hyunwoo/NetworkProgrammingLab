@@ -1,4 +1,4 @@
-package kr.ac.konkuk.network.stream.inheritance;
+package kr.ac.konkuk.network.stream.out.inheritance;
 
 public class Parent {
     int i = 7;

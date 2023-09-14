@@ -1,4 +1,4 @@
-package kr.ac.konkuk.network.stream;
+package kr.ac.konkuk.network.stream.out;
 
 import java.util.stream.IntStream;
 
